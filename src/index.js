@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import { userRouter } from "./routes/user.js";
 import { scoreRouter } from "./routes/score.js";
 import dotenv from "dotenv";
+const PORT = process.env.PORT || 3001;
 
 dotenv.config();
 
@@ -23,4 +24,4 @@ mongoose.connect(
   }
 );
 
-app.listen(3001, () => console.log("Server started"));
+app.listen(PORT, () => console.log("Server started"));
